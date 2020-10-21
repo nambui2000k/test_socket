@@ -42052,7 +42052,7 @@ F.qQ.prototype={
 lI:function(){var s=0,r=P.an(t.z),q=this,p
 var $async$lI=P.ad(function(a,b){if(a===1)return P.ak(b,r)
 while(true)switch(s){case 0:s=2
-return P.ay(G.a8f("http://doublep.tk/"),$async$lI)
+return P.ay(G.a8f("http://doublep.tk/api/socket"),$async$lI)
 case 2:p=b
 if(p.b===200)q.aO(new F.QS(q,C.bl.xZ(0,B.a89(U.a6y(p.e).c.a.i(0,"charset")).dm(0,p.x),null)))
 return P.al(null,r)}})
