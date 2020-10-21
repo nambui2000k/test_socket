@@ -2,6 +2,7 @@ let express = require('express')
 let app = express()
 let http = require('http').createServer(app)
 let io = require('socket.io')(http)
+app.use(express.static('public'))
 const messageArr = {data: []}
 const RECEIVE = "RECEIVE"
 const SEND = "SEND"
@@ -15,7 +16,7 @@ io.on('connect', (socket) => {
 })
 http.listen(process.env.PORT || 8120)
 
-app.get("/", (async (req, res) => {
+app.get("/api/socket", (async (req, res) => {
     res.header("Access-Control-Allow-Origin","*");
     res.json({
         "status": true,
