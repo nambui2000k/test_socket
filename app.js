@@ -16,6 +16,7 @@ io.on('connect', (socket) => {
 http.listen(process.env.PORT || 8120)
 
 app.get("/", (async (req, res) => {
+    res.header("Access-Control-Allow-Origin","*");
     res.json({
         "status": true,
         "message": "",
